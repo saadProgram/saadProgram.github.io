@@ -12,7 +12,6 @@ const firebaseConfig = {
   // Reference messages collection
 var messagesRef = firebase.database().ref('contactformmessages');
 
-
 $('#contactForm').submit(function(e) {
     e.preventDefault();
  
@@ -28,12 +27,3 @@ $('#contactForm').submit(function(e) {
  
     $('#contactForm')[0].reset();
 });
-
-// messagesRef.once('value').then((snapshot) => {
-//     Object.keys(snapshot.val()).forEach((key) => {
-//         console.log(`Name: ${snapshot.val()[key].name}`);
-//         console.log(`Email: ${snapshot.val()[key].email}`);
-//         console.log(`Subject: ${snapshot.val()[key].subject}`);
-//         console.log(`Message: ${snapshot.val()[key].message}`);
-//     });
-// });
