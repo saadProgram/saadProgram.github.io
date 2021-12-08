@@ -25,7 +25,7 @@ var config = {
     var name = getInputVal('name');
     // var company = getInputVal('company');
     var email = getInputVal('email');
-    var phone = getInputVal('subject');
+    var subject = getInputVal('subject');
     var message = getInputVal('message');
   
     // Save message
