@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Firebase</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+    <div class="row">
+        <div class="container">
+            <h2>Contact Form</h2>
+            <div class="alert alert-success success-message" style="display:none;">Form submitted successfully.</div>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="exampleFullName">Full Name</label>
+                    <input type="text" class="form-control fullname" id="exampleFullName" placeholder="Enter Full Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="exampleEmail">Email</label>
+                    <input type="email" class="form-control email" id="exampleEmail" placeholder="Enter Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="exampleSubject">Subject</label>
+                    <input type="text" class="form-control subject" id="exampleSubject" placeholder="Enter Subject" required>
+                </div>
+                <div class="form-group">
+                    <label for="exampleMessage">Message</label>
+                    <textarea class="form-control message" id="exampleMessage" placeholder="Enter Message" cols="30" rows="10" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.0/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        import { initializeApp } from 'firebase/app';
+        import { getDatabase } from "firebase/database";
+
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyD0JJS5XwLcahOJW5J0hztX_Ila2GYL-ek",
+          authDomain: "supermarket-af419.firebaseapp.com",
+          databaseURL: "https://supermarket-af419-default-rtdb.firebaseio.com",
+          projectId: "supermarket-af419",
+          storageBucket: "supermarket-af419.appspot.com",
+          messagingSenderId: "65288925001",
+          appId: "1:65288925001:web:dcd6b15832615bbf983498",
+          measurementId: "${config.measurementId}"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      </script>
+</body>
+</html>
